@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Kurs Rupiah</title>
+    <h2>KURS MATA UANG RUPIAH</h2>
+    <style>
+      #back{
+        background-color: lightgrey;
+
+      }
+      body{
+        background-color: lightblue;
+      }
+    </style>
+    <script>
+      function jumblah() {
+        let a = Number(document.getElementById("nilai").value);
+        let b = document.getElementById("values").value;
+
+        if (b === "dollar") {
+          document.getElementById("rupiah").value = a * 9915;
+        } else if (b === "dollarsing") {
+          document.getElementById("rupiah").value = a * 13472;
+        } else if (b === "ringgit") {
+          document.getElementById("rupiah").value = a * 874;
+        } else if (b === "yen") {
+          document.getElementById("rupiah").value = a * 120;
+        } else if (b === "euro") {
+          document.getElementById("rupiah").value = a * 15888;
+        } else if (b === "riyal") {
+          document.getElementById("rupiah").value = a * 3592;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <fieldset id="back">
+      <legend>Kurs Rupiah-Mata Uang Asing</legend>
+      <table>
+        <tr>
+          <th>Masukkan Nilai</th>
+          <th>Values</th>
+          <th>Nilai Rupiah</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="nilai" value="0" onchange="jumblah()" />
+          </td>
+          <td>
+            <select id="values" onchange="jumblah()">
+              <option value="dollar">Dollar US</option>
+              <option value="dollarsing">Dollar Singapore</option>
+              <option value="ringgit">Ringgit Malaysia</option>
+              <option value="yen">Yen Jepang</option>
+              <option value="euro">Euro</option>
+              <option value="riyal">Riyal Arab Saudi</option>
+            </select>
+          </td>
+          <td><input type="text" id="rupiah" value="0" /></td>
+        </tr>
+      </table>
+    </fieldset>
+  </body>
+</html>
