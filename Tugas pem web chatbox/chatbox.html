@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lan=id>
+    <head>
+        <title>CHAT BOX</title>
+        <style>
+            #chat{
+                display: block;
+                background: lightgrey;
+                width: 200%;
+                top: 0px;
+                left: 0px;
+                margin-top: 45%;
+            }
+            .tabs{
+                background-color: lightseagreen;
+                color :#fff;
+                position: fixed;
+                widows: 100px;
+                padding : 10px;
+                top : 0px;
+                left: 0px;
+            }
+        </style>
+    </head>
+<body>
+    <br><br>
+<table border="1">
+<tr> 
+    <td>
+    <div id="chat">
+        <div class="tabs">CHAT BOX</div>
+    </div>
+        <p class="name">Hallo</p>
+        <input type="text" class="massage" placeholder="massage.." >
+        <button type="submit" class="save" onclick="tes()">send</button>
+        <script>
+            let a = document.querySelector(".name");
+            let b = document.querySelector(".massage");
+            let c = document.querySelector(".save");
+
+            function tes() {
+                a.innerHTML = a.innerHTML + "<br>" + b.value;
+                b.value ="";
+            }
+        </script>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
